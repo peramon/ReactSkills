@@ -7,7 +7,7 @@ import './styles.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <App title='Hi I am Azrael-Batman' subTitle={ 123 }/>
+        <App />
         <SecondApp />
     </React.StrictMode>
 )

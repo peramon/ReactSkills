@@ -14,7 +14,10 @@
 // }
 import PropTypes from 'prop-types';
 
-export const App = ( { title, subTitle } ) => {
+export const App = ( { 
+    title, 
+    subTitle
+} ) => {
 
     return (
         <>
@@ -31,7 +34,13 @@ export const App = ( { title, subTitle } ) => {
 
 App.propTypes = {
     title: PropTypes.string.isRequired,
-    subTitle: PropTypes.number.isRequired
+    subTitle: PropTypes.string.isRequired
+}
+
+App.defaultProps = {
+    title: 'No title',
+    subTitle: 'No subtitle',
+    name: 'Paul Ramon'
 }
 
 // export const App = () => <h1>Arrow Hello</h1>
