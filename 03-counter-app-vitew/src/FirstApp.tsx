@@ -3,6 +3,8 @@
 // }
 // export default App;
 
+import React from "react";
+
 // import { Fragment } from "react/jsx-runtime"
 // const newMessage = {
 //     msj: 'hello world',
@@ -12,13 +14,14 @@
 // function sendGreeting(greeting: string): string{
 //     return greeting;
 // }
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-export const App = ( { 
-    title, 
-    subTitle
-} ) => {
+interface AppProps {
+    title?: string;
+    subTitle?: string;
+}
 
+export const App: React.FC<AppProps> = ({ title = 'No title', subTitle='No subtitle'}) => {
     return (
         <>
             <h1>Hello Baby</h1>
@@ -32,15 +35,15 @@ export const App = ( {
     )
 }
 
-App.propTypes = {
-    title: PropTypes.string.isRequired,
-    subTitle: PropTypes.string.isRequired
-}
+// App.propTypes = {
+//     title: PropTypes.string.isRequired,
+//     subTitle: PropTypes.string.isRequired
+// }
 
-App.defaultProps = {
-    title: 'No title',
-    subTitle: 'No subtitle',
-    name: 'Paul Ramon'
-}
+// App.defaultProps = {
+//     title: 'No title',
+//     subTitle: 'No subtitle',
+//     name: 'Paul Ramon'
+// }
 
 // export const App = () => <h1>Arrow Hello</h1>
